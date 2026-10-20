@@ -5,6 +5,15 @@
     <description>Jean updates</description>
     <language>en</language>
     <item>
+      <title>Jean 0.3.1</title>
+      <pubDate>Tue, 20 Oct 2026 07:04:34 GMT</pubDate>
+      <sparkle:version>116</sparkle:version>
+      <sparkle:shortVersionString>0.3.1</sparkle:shortVersionString>
+      <sparkle:minimumSystemVersion>13.0</sparkle:minimumSystemVersion>
+      <description>&lt;p&gt;Jean 0.3.1.&lt;/p&gt;</description>
+      <enclosure url="https://github.com/msiegerJBI/jean-updates/releases/download/v0.3.1/Jean.dmg" length="139915982" type="application/octet-stream" sparkle:edSignature="oU8RUYulQvnYkM+VTgw5hHPXV8t2coLign5b2O8XiYCmOjrzMhmA0cgNqn5T8ZfebefZ0KaiLnW48eEtwixoCw==" />
+    </item>
+    <item>
       <title>Jean 0.3.0</title>
       <pubDate>Tue, 20 Oct 2026 06:18:50 GMT</pubDate>
       <sparkle:version>110</sparkle:version>
