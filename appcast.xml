@@ -5,6 +5,16 @@
     <description>Jean updates</description>
     <language>en</language>
     <item>
+      <title>Jean 0.4.3</title>
+      <pubDate>Wed, 21 Oct 2026 17:52:14 GMT</pubDate>
+      <sparkle:version>171</sparkle:version>
+      <sparkle:shortVersionString>0.4.3</sparkle:shortVersionString>
+      <sparkle:minimumSystemVersion>13.0</sparkle:minimumSystemVersion>
+      <description>&lt;h3&gt;Jean 0.4.3&lt;/h3&gt;
+&lt;ul&gt;&lt;li&gt;**Updates install themselves.** From now on Jean checks every hour, installs updates and relaunches by itself.&lt;/li&gt;&lt;li&gt;**The hub on your phone (setup).** `jean tunnel setup` connects the hub to your own address behind Cloudflare sign-in, from one paste.&lt;/li&gt;&lt;li&gt;**Fewer false stops.** The guard no longer blocks read-only commands like awk, find and git branch --list, or notes that name a file. Real risks still need your check mark.&lt;/li&gt;&lt;li&gt;**Your plan, never an API key.** Lanes, relays and Studio never pick up an Anthropic API key from the Mac, so Jean always bills your Claude plan.&lt;/li&gt;&lt;li&gt;**Dev bench (off by default).** A nightly review of the lanes work, for Jeans developers.&lt;/li&gt;&lt;/ul&gt;</description>
+      <enclosure url="https://github.com/msiegerJBI/jean-updates/releases/download/v0.4.3/Jean.dmg" length="140389700" type="application/octet-stream" sparkle:edSignature="oUsXRQV2yESmYsNDVLHLHVusID6fIZ586RvI0cb3iCXAQZ8S4kdk92HBqBpVWj+1GWenil8/RG+FFpsj9r3DDg==" />
+    </item>
+    <item>
       <title>Jean 0.4.2</title>
       <pubDate>Wed, 21 Oct 2026 13:08:12 GMT</pubDate>
       <sparkle:version>147</sparkle:version>
