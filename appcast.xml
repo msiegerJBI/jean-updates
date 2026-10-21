@@ -5,6 +5,17 @@
     <description>Jean updates</description>
     <language>en</language>
     <item>
+      <title>Jean 0.4.1</title>
+      <pubDate>Wed, 21 Oct 2026 01:52:10 GMT</pubDate>
+      <sparkle:version>145</sparkle:version>
+      <sparkle:shortVersionString>0.4.1</sparkle:shortVersionString>
+      <sparkle:minimumSystemVersion>13.0</sparkle:minimumSystemVersion>
+      <description>&lt;h3&gt;Jean 0.4.1&lt;/h3&gt;
+&lt;p&gt;**Tidier Slack threads** - Send several messages in a row and Jean answers them together, once. - A "thanks" or "all good" gets a 👍 instead of a reply. - Each request ends as one message: the "On it" card turns into the answer. - Shorter answers, no repeated commands, and a new topic gets its own thread.&lt;/p&gt;
+&lt;p&gt;**Studio message queue** - Type while Studio is working: your message joins the task in progress. - If the task has just finished, it waits and runs next. Stop hands it back.&lt;/p&gt;</description>
+      <enclosure url="https://github.com/msiegerJBI/jean-updates/releases/download/v0.4.1/Jean.dmg" length="140265493" type="application/octet-stream" sparkle:edSignature="Qt31XMatk+J1H8BTQx3abz0FuhdHXY9mzy3hm1oogLE/W+lm/Y7mtD4CK7XZitPxUenGMAUh69AxmFt8Pm+ZDA==" />
+    </item>
+    <item>
       <title>Jean 0.4.0</title>
       <pubDate>Tue, 20 Oct 2026 15:36:30 GMT</pubDate>
       <sparkle:version>142</sparkle:version>
