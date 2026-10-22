@@ -5,6 +5,16 @@
     <description>Jean updates</description>
     <language>en</language>
     <item>
+      <title>Jean 0.4.4</title>
+      <pubDate>Wed, 21 Oct 2026 23:59:06 GMT</pubDate>
+      <sparkle:version>206</sparkle:version>
+      <sparkle:shortVersionString>0.4.4</sparkle:shortVersionString>
+      <sparkle:minimumSystemVersion>13.0</sparkle:minimumSystemVersion>
+      <description>&lt;h3&gt;Jean 0.4.4&lt;/h3&gt;
+&lt;ul&gt;&lt;li&gt;Only you approve. A specialist can no longer act as you: code it writes for a tab stays a draft until you preview and publish it (hub › To approve), and an automation it changes turns off until you approve the new steps, which the Slack message now shows in full.&lt;/li&gt;&lt;li&gt;Jean.app proves itself to the hub without sending its key, and the hub's sign-in for your windows lives only in memory, so nothing on this Mac can copy it.&lt;/li&gt;&lt;li&gt;The Library never copies a file that points somewhere else, or anything from Jean's own folder.&lt;/li&gt;&lt;li&gt;Slack task cards say "Waiting on you" when a specialist needs your answer, and tick off every step when the task is done.&lt;/li&gt;&lt;li&gt;The phone hub setup accepts Cloudflare account tokens, and says plainly when a token is mistyped.&lt;/li&gt;&lt;/ul&gt;</description>
+      <enclosure url="https://github.com/msiegerJBI/jean-updates/releases/download/v0.4.4/Jean.dmg" length="140845844" type="application/octet-stream" sparkle:edSignature="gP+uFGUBRIbW5NfGD3QyjO65o1ARxbWCFwLPLPtiNN8GFryhwoEbUnty3duY0p6IxvbgsnBhnLlCRBgU5KYXDA==" />
+    </item>
+    <item>
       <title>Jean 0.4.3</title>
       <pubDate>Wed, 21 Oct 2026 17:52:14 GMT</pubDate>
       <sparkle:version>171</sparkle:version>
