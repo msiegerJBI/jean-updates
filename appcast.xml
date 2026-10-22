@@ -5,6 +5,21 @@
     <description>Jean updates</description>
     <language>en</language>
     <item>
+      <title>Jean 0.4.5</title>
+      <pubDate>Thu, 22 Oct 2026 03:13:47 GMT</pubDate>
+      <sparkle:version>249</sparkle:version>
+      <sparkle:shortVersionString>0.4.5</sparkle:shortVersionString>
+      <sparkle:minimumSystemVersion>13.0</sparkle:minimumSystemVersion>
+      <description>&lt;h3&gt;Jean 0.4.5&lt;/h3&gt;
+&lt;h3&gt;Fixes&lt;/h3&gt;
+&lt;p&gt;- Studio: in 0.4.4 every Studio message ended with no answer (Claude was started without the message). Fixed. A message typed before Studio has finished opening is now held and sent as soon as it is ready instead of being lost. The same bug stopped Settings › Keys from saving a key in 0.4.4; fixed too. (#30, #39) - Studio: a message typed early is never lost: if Studio can't open or no Claude is found, it goes back into the message box with a note. Pressing Stop just before a retry now always stops. (#40) - A specialist is never restarted to free up memory before it has written its handoff notes: Jean asks you to check on it instead. It is never started twice either. (#27) - Jean.app no longer crashes when a window closes while a command it started is being stopped. (#45) - `jean doctor` no longer tells a desktop Mac "Laptops don't have it" when it can't find the restart-after-power-failure setting. (#35)&lt;/p&gt;
+&lt;h3&gt;Security&lt;/h3&gt;
+&lt;p&gt;- The guard stops forged approvals and secret reads hidden behind wildcards, braces, variables, arrays, loops, `cd`, `xargs` and similar shell forms. (#38) - The guard stops writes into its own files through 17 tricky shell forms it used to miss. (#31) - The guard matches file names in any letter case, with accents, and through links, so CAPS or a shortcut can't sneak past it. (#37) - A read-only git command redirected into Jean's own files (for example, git log written over the approvals file) now counts as a write and is stopped. (#34) - False alarm fixed: commit messages and PR text that only mention Jean's own files are no longer blocked. Real writes to those files and secret reads are still stopped. (#32)&lt;/p&gt;
+&lt;h3&gt;New&lt;/h3&gt;
+&lt;p&gt;- Studio: a mic button types what you say into the message box (macOS asks for the microphone and speech recognition once), and Shift+Enter makes a new line while Enter still sends. (#36) - New setup guide page, "Your always-on Mac and restarts", and three new `jean doctor` checks: FileVault, automatic login, and restart after a power failure. (#29)&lt;/p&gt;</description>
+      <enclosure url="https://github.com/msiegerJBI/jean-updates/releases/download/v0.4.5/Jean.dmg" length="140832837" type="application/octet-stream" sparkle:edSignature="UP+4hvXKL9x7HUBwMFrbKDqmsv9/4ET//N52yV2kvSEcb/VGerbH/LAYplQXf34+atui5CJNw/eRHn5NP7xrBQ==" />
+    </item>
+    <item>
       <title>Jean 0.4.4</title>
       <pubDate>Wed, 21 Oct 2026 23:59:06 GMT</pubDate>
       <sparkle:version>206</sparkle:version>
