@@ -5,6 +5,22 @@
     <description>Jean updates</description>
     <language>en</language>
     <item>
+      <title>Jean 0.4.7</title>
+      <pubDate>Sun, 25 Oct 2026 16:49:56 GMT</pubDate>
+      <sparkle:version>419</sparkle:version>
+      <sparkle:shortVersionString>0.4.7</sparkle:shortVersionString>
+      <sparkle:minimumSystemVersion>13.0</sparkle:minimumSystemVersion>
+      <description>&lt;h3&gt;Jean 0.4.7&lt;/h3&gt;
+&lt;p&gt;Changes since 0.4.6 (d03b84c), merged into slack-tidy (39f9e23), #69–#79.&lt;/p&gt;
+&lt;h3&gt;New&lt;/h3&gt;
+&lt;p&gt;- Approval levels: for each lane, owners choose how much it may do without a ✅. Merges, deploys, publishing, spending, sending outside the team and deleting can each be **Ask** (as before), **Tell me** (goes ahead; Jean posts what it did in Slack) or **Allow** (goes ahead; listed in the day's digest after 18:00). Set them in Settings › Approvals or with `jean levels`; lanes can see theirs but not change them. (#70) - Trust windows: a lane, or Jean for any lane, can ask in Slack for up to 8 hours of Tell me. One ✅ turns it on. (#70) - Whatever the levels, these still ask: starting Claude sessions, background jobs, hooks, anything touching Jean's own files, the coordinator, each connection's tools (they follow the connection's own setting), and deletes outside a lane's own work. (#70, #72) - Slack task card: each step gets its own row with the tool's icon (GitHub, Stripe, PostHog…), a live line says what kind of step is running ("running a command", "editing a file"), and the done card lists the tools used. (#73, #78) - Details on the card: the step log for everyone; for owners also a peek at the last moves, the files changed and the cost so far. Secrets are hidden in the peek. (#73, #76) - Approving in the card: a lane's ask about a merge, deploy, publish, payment, message or delete shows on the task's card with Approve / Not yet. On a card only the button approves; a ✅ reaction there does nothing. Other asks keep their own post. (#74, #75) - Tell me posts and the evening digest look like the card. In the channel they say only which lane did what kind of action and when; See the list (owners only) shows what each one ran. (#75, #76, #79) - Slack: the "On it" card shows Jean's animated step marks: a silver comet while a step runs, a green tick when it's done, a desk bell while a task waits on you. A workspace without the emoji shows ⏳ / ✓ / 🛎️. Upload steps are in docs/slack-emoji.md; new Slack apps get the `emoji:read` permission this needs. (#71)&lt;/p&gt;
+&lt;h3&gt;Security (the guard)&lt;/h3&gt;
+&lt;p&gt;- Jean's command can't be run under another name: a copy, a link, a variable, `$(which …)`, a PATH set on the line, or a program fed through `xargs`/`parallel`. Making a copy of it is stopped. (#69) - A lane can't change approval levels or Jean's config through Jean's own Python modules. (#70) - Code in a here-document is checked in the folder the line has moved into, and after `if`/`then`/`do`/`{` (before, it could go unread there). (#77)&lt;/p&gt;
+&lt;h3&gt;Fixes&lt;/h3&gt;
+&lt;p&gt;- No longer stopped by mistake: text in a here-document when the same line runs Jean's command by its full path (a PR comment, a review), harmless aliases (`alias ll='ls $HOME'`), a log named like Jean's (`test_guard.log`), a lane editing its own handoff notes with a here-document after `cd ~/.jean/lanes`. (#69, #72, #77) - Tell me posts and the evening digest survive a failed Slack post or a bridge restart. (#70)&lt;/p&gt;</description>
+      <enclosure url="https://github.com/msiegerJBI/jean-updates/releases/download/v0.4.7/Jean.dmg" length="141289645" type="application/octet-stream" sparkle:edSignature="XmGAl1OK+Y5pLEvYJ0mlTyFN6icJrLBDHjXFOMIavNrKCD0hXf+ykPw6g58iSJJ8EbN6fM4ONWV89UUd2dqkBA==" />
+    </item>
+    <item>
       <title>Jean 0.4.6</title>
       <pubDate>Sun, 25 Oct 2026 01:38:04 GMT</pubDate>
       <sparkle:version>376</sparkle:version>
