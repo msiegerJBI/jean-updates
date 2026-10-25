@@ -5,6 +5,24 @@
     <description>Jean updates</description>
     <language>en</language>
     <item>
+      <title>Jean 0.4.6</title>
+      <pubDate>Sun, 25 Oct 2026 01:38:04 GMT</pubDate>
+      <sparkle:version>376</sparkle:version>
+      <sparkle:shortVersionString>0.4.6</sparkle:shortVersionString>
+      <sparkle:minimumSystemVersion>13.0</sparkle:minimumSystemVersion>
+      <description>&lt;h3&gt;Jean 0.4.6&lt;/h3&gt;
+&lt;p&gt;Changes since 0.4.5 (from d861961), merged into slack-tidy (6116176).&lt;/p&gt;
+&lt;h3&gt;Slack bridge&lt;/h3&gt;
+&lt;p&gt;- The bridge notices when its Slack connection dies and reconnects on its own (or restarts). `jean doctor` shows ✗ while it's down, and `jean watch` restarts a bridge that stays disconnected. (#59) - After a restart, `jean doctor` shows the bridge as starting instead of briefly ✗. If it keeps crashing at startup (a bad Slack token, say), doctor shows ✗ after 2 minutes instead of "starting" forever. (#62, #63) - `jean doctor` checks that Claude Code is 2.1.295 or later (needed for the guard to block when it can't run) and says to run `claude update` if not. (#61)&lt;/p&gt;
+&lt;h3&gt;Security (the guard)&lt;/h3&gt;
+&lt;p&gt;- A lane can start one exact Claude session, or have Jean restart one lane, once an owner approves that command (a new "session" approval). (#33, #53) - **Approvals asked for just before this update won't match after it** (command ids now keep spacing inside quotes): ask again. One time only. - Closes many ways a command could run something the guard didn't see: git remote helpers and settings that run programs, text piped or fed into a shell or an interpreter, `trap`, `watch`, `find -exec sh -c`, `$(…)` inside here-documents, AppleScript `do shell script`, awk `system()`, and variable tricks (array elements, `+=`, `printf -v`, export/declare). (#47, #50, #60) - Only an owner can turn overflow helpers on or change them, change the packages in Jean's own Python, or restart Jean's background services. Checking a service (`launchctl print`, `list`) is fine. (#54, #60) - A lane can write only its own handoff notes. The file-editing tools and shell commands follow the same rules, and a repository's own hooks need an owner's OK. (#41, #58) - More git holes closed: `git clone -c`/`--config` settings (any short form, bundled flags), `--git-dir`, `--separate-git-dir` by any short form, and a repo's `.git` put in place by mv/cp (any letter case, as macOS sees it). (#67)&lt;/p&gt;
+&lt;h3&gt;Fixes&lt;/h3&gt;
+&lt;p&gt;- The memory meter reads 1M-token context windows correctly. (#64) - No longer stopped by mistake: `claude --help` and other read-only claude subcommands (#65); a lane's own modules named like Jean's (`work.py`, `keys.py`, `connectors/`) (#66); `2&amp;gt;&amp;amp;1`, `git for-each-ref`, `git remote show`, `git rebase --exec 'make test'`, harmless sed edits, text in single quotes or in a quoted here-document (a PR body or release note naming a command), a PR title with an apostrophe, Jean's own Python run to look, a lane's own scripts and job temp folder. (#48, #50, #56, #60)&lt;/p&gt;
+&lt;h3&gt;New&lt;/h3&gt;
+&lt;p&gt;- Worker sessions (`jean spawn`): a lane with several independent tasks asks an owner once, naming the tasks; after the ✅ it starts one worker per task, each in its own git worktree and branch, closed when the approved hours are up. The ask lists each task's text, and workers get exactly that text and the reason you approved, even if the task changes later. A lane can ask for workers only for itself. Workers follow the lane's rules and still ask before merges and deploys. (#66, #68) - Settings › Connections: each tool has its own step-by-step setup page with live links (Setup steps button). (#55) - Overflow helpers: a busy lane can hand new tasks to a temporary second session (off until an owner turns it on). (#52, #57) - Updates: before an update rolls back, Jean checks the copy it would roll back to is complete and signed. (#49)&lt;/p&gt;</description>
+      <enclosure url="https://github.com/msiegerJBI/jean-updates/releases/download/v0.4.6/Jean.dmg" length="141102509" type="application/octet-stream" sparkle:edSignature="1wYFChodvC/9/ewPUV2k0dZ7/6qtqFpmYKukeu7rxItWsXZl+l59EdaYYfKo5+mxUGymKinrQFdhpWzsNbEMCw==" />
+    </item>
+    <item>
       <title>Jean 0.4.5</title>
       <pubDate>Thu, 22 Oct 2026 03:13:47 GMT</pubDate>
       <sparkle:version>249</sparkle:version>
