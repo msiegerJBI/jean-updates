@@ -5,6 +5,18 @@
     <description>Jean updates</description>
     <language>en</language>
     <item>
+      <title>Jean 0.4.8</title>
+      <pubDate>Mon, 26 Oct 2026 00:02:27 GMT</pubDate>
+      <sparkle:version>436</sparkle:version>
+      <sparkle:shortVersionString>0.4.8</sparkle:shortVersionString>
+      <sparkle:minimumSystemVersion>13.0</sparkle:minimumSystemVersion>
+      <description>&lt;h3&gt;Jean 0.4.8&lt;/h3&gt;
+&lt;p&gt;A security update for the guard. Install it soon.&lt;/p&gt;
+&lt;h3&gt;Security (the guard)&lt;/h3&gt;
+&lt;p&gt;- A merge, release or deploy through `gh` asks for your ✅ again, however the command is written. Some ways of writing gh's options could get past that check. Merges through GitHub's API (GraphQL included) are covered too. (#83) - A lane can't change Jean's files, its approval records included, through some ways of writing a `sed` command. The guard now reads sed scripts the way sed does, scripts in a file too, and every way of asking sed to edit a file in place. (#84, #86) - A sed script that runs a command still asks when it only reads one of Jean's files. (#86) - A lane can't write into Jean's folders through a line whose folder changes the guard can't follow (popd, a `cd` in brackets or a pipe, a `cd` that fails): such a line is checked in every folder it reached. (#92) - `git fetch` and `git remote update` in the developer's Jean checkout now stop like other changes there: they write into it. In a lane's own repo they still pass. (#80)&lt;/p&gt;</description>
+      <enclosure url="https://github.com/msiegerJBI/jean-updates/releases/download/v0.4.8/Jean.dmg" length="141299416" type="application/octet-stream" sparkle:edSignature="RVb4vClrMZyS9KSWp0nNSIbvknZFypUHy1fsdQYBtJwOWj8hYrf2aiTH6WyYaIS+E+XddWwKKk79laiqLoZXCA==" />
+    </item>
+    <item>
       <title>Jean 0.4.7</title>
       <pubDate>Sun, 25 Oct 2026 16:49:56 GMT</pubDate>
       <sparkle:version>419</sparkle:version>
