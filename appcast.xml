@@ -5,6 +5,22 @@
     <description>Jean updates</description>
     <language>en</language>
     <item>
+      <title>Jean 0.4.9</title>
+      <pubDate>Mon, 26 Oct 2026 02:22:15 GMT</pubDate>
+      <sparkle:version>468</sparkle:version>
+      <sparkle:shortVersionString>0.4.9</sparkle:shortVersionString>
+      <sparkle:minimumSystemVersion>13.0</sparkle:minimumSystemVersion>
+      <description>&lt;h3&gt;Jean 0.4.9&lt;/h3&gt;
+&lt;p&gt;A security update for the guard, plus fewer false stops. Install it soon.&lt;/p&gt;
+&lt;h3&gt;Security (the guard)&lt;/h3&gt;
+&lt;p&gt;- Merging, publishing a release, deleting or archiving a repo, or starting a deploy through GitHub's API now asks for your ✅, just as gh's own commands do. That covers `gh api`, curl, wget and httpie. Any other change to a repo through the API asks too, unless it's everyday work like comments, issues, pull requests, labels or rerunning CI. (#93) - A lane can't mark its own CI as passed, move a branch, or commit a file through GitHub's API without asking. (#93) - `gh auth token` and `gh auth status --show-token` no longer print your GitHub token to a lane. (#81) - Recursive deletes from inside a script (Python and others) outside the lane's folder ask, like `rm -rf`. (#87) - curl's and wget's settings files (`~/.curlrc`, `~/.wgetrc`) are protected like `~/.netrc`. (#93)&lt;/p&gt;
+&lt;h3&gt;Fewer false stops&lt;/h3&gt;
+&lt;p&gt;- gh commands that only read from GitHub pass in the developer's Jean checkout. `gh pr checkout` and `gh repo sync` there still stop. (#81) - sed ranges built with shell arithmetic, like `$((s+45))`, pass. (#82) - `cd -` goes back to the folder before, so the guard knows where the next command runs. (#90) - `jean levels` with a word it doesn't know says how to list the levels. (#91)&lt;/p&gt;
+&lt;h3&gt;Slack&lt;/h3&gt;
+&lt;p&gt;- When buttons are off, a task card's ask moves to its own post instead of waiting on the card. (#88) - Tell me never shows a lane's slug, and a failed save doesn't post the same events twice. (#89)&lt;/p&gt;</description>
+      <enclosure url="https://github.com/msiegerJBI/jean-updates/releases/download/v0.4.9/Jean.dmg" length="141319057" type="application/octet-stream" sparkle:edSignature="dbSTsoL00EzhPzwj7zPj8eX63gA8kqqnqN42WcS+K+hxNPcJ8+SRgxC6wU+eD+ZCWy+S5CpKekjaygNbRg9gBw==" />
+    </item>
+    <item>
       <title>Jean 0.4.8</title>
       <pubDate>Mon, 26 Oct 2026 00:02:27 GMT</pubDate>
       <sparkle:version>436</sparkle:version>
