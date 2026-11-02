@@ -5,6 +5,31 @@
     <description>Jean updates</description>
     <language>en</language>
     <item>
+      <title>Jean 0.4.10</title>
+      <pubDate>Mon, 02 Nov 2026 01:45:48 GMT</pubDate>
+      <sparkle:version>510</sparkle:version>
+      <sparkle:shortVersionString>0.4.10</sparkle:shortVersionString>
+      <sparkle:minimumSystemVersion>13.0</sparkle:minimumSystemVersion>
+      <description>&lt;h3&gt;Jean 0.4.10&lt;/h3&gt;
+&lt;p&gt;One Slack channel per specialist, a clearer Task details window, and a round of guard fixes. Install it soon: the guard fixes close gaps a lane could use to act without asking.&lt;/p&gt;
+&lt;h3&gt;Before you start: one change in your Slack app&lt;/h3&gt;
+&lt;p&gt;Jean can now link a channel when you invite it. For that, the Slack app needs one more event and two more permissions:&lt;/p&gt;
+&lt;p&gt;1. Open api.slack.com/apps › Jean. 2. **Event Subscriptions › Subscribe to bot events:** add `member_joined_channel`. 3. **OAuth &amp;amp; Permissions › Bot Token Scopes:** add `channels:read` and `groups:read`. 4. Press **Reinstall to Workspace** and allow.&lt;/p&gt;
+&lt;p&gt;Without this, everything else works. Inviting Jean just doesn't link a channel, and you can still link one by hand (below).&lt;/p&gt;
+&lt;p&gt;After installing, restart the Slack bridge once so it picks up the new Slack features: `launchctl kickstart -k gui/$(id -u)/com.jean.bridge`.&lt;/p&gt;
+&lt;h3&gt;Slack: a channel for each specialist&lt;/h3&gt;
+&lt;p&gt;- #jean stays the main channel: requests, approvals, answers and daily briefs. Each specialist can also have its own channel, like #jean-build or #jean-research. (#94) - When a task goes to a specialist with its own channel, a thread opens there with that specialist's steps, linked from your request. The answer still comes back in your thread. (#94) - To give a specialist a channel, an owner creates `#jean-&amp;lt;specialist&amp;gt;` (for example `#jean-research`) and invites @Jean. Jean links it and says hello. An invite from a team member, or to a channel with another name, links nothing. (#98) - You can also link one by hand on the Mac: `jean slack channels link research &amp;lt;channel id&amp;gt;`. `jean slack channels` lists them. (#94) - A request posted straight into a specialist's channel is that specialist's task, answered there. (#94) - If you unlink a channel, open tasks stop posting there. (#96)&lt;/p&gt;
+&lt;h3&gt;Slack: a clearer Task details window&lt;/h3&gt;
+&lt;p&gt;- **Details** on a task now starts with a plain summary: who asked, what they asked, and what was done or is happening now. (#95) - Below that are two short sections, each with **More**. **Simple** says who worked on it and what the last step was. **Technical**, for owners only, says what was touched (counts of commands and edits, files, estimated cost) without pasting commands. (#95) - "Asked by" shows the person who asked, not Jean. (#95)&lt;/p&gt;
+&lt;h3&gt;Security (the guard)&lt;/h3&gt;
+&lt;p&gt;- **Stricter, as you chose:** writing to a file whose name the guard can't see (a variable set in an earlier step, or names read from a list) now asks. Names it can work out, temporary folders and your home folder pass. (#103, ask a5f370e) - **Stricter, as you chose:** curl that sends a change to an address the guard can't see now asks, whatever the site. (#102, ask a240fec) - Changes to GitHub made from code (Python's requests, Node's fetch and others) are judged like `gh` and curl. Changes to organisation settings, SSH keys and email addresses ask too. curl pointed at another settings file (`CURL_HOME`) asks. (#102) - A command split over two lines with `\` is now judged as one, so a delete or a push to main can't slip past by being split. (#101) - Recursive deletes from code outside the lane's folder ask, however the code reaches them, including paths that climb out with `..`. Plain `rm -rf` now catches those too. (#106) - git options that could hide a push to main, or run a command from a setting, are read correctly. So is `gh workflow run --ref main deploy.yml`. (#105) - Linking or unlinking a specialist's Slack channel is an owner's job. (#104)&lt;/p&gt;
+&lt;h3&gt;Fewer false stops&lt;/h3&gt;
+&lt;p&gt;- A script line continued with `\` is read as one line, so Research's PDF renderer runs again. (#101)&lt;/p&gt;
+&lt;h3&gt;Reliability&lt;/h3&gt;
+&lt;p&gt;- The Slack bridge and `jean slack channels` no longer overwrite each other's settings changes. (#98) - If the settings file stays busy, Jean gives up after 10 seconds instead of hanging. Your request or ✅ still goes through; an invite or a pairing message gets "try again in a moment". (#100) - `jean progress --summary` on a stopped task now tells the lane it was stopped. (#97)&lt;/p&gt;</description>
+      <enclosure url="https://github.com/msiegerJBI/jean-updates/releases/download/v0.4.10/Jean.dmg" length="141371684" type="application/octet-stream" sparkle:edSignature="or5VMxdP306aFRAowMsSwTCs1kOYdg5dGdCne4ePeBu9x4ZHjxnfy3V3IcZeJgjlULM5IZtK3sCoXwRl6lWRBw==" />
+    </item>
+    <item>
       <title>Jean 0.4.9</title>
       <pubDate>Mon, 26 Oct 2026 02:22:15 GMT</pubDate>
       <sparkle:version>468</sparkle:version>
