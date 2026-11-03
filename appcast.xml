@@ -5,6 +5,35 @@
     <description>Jean updates</description>
     <language>en</language>
     <item>
+      <title>Jean 0.4.11</title>
+      <pubDate>Tue, 03 Nov 2026 06:48:47 GMT</pubDate>
+      <sparkle:version>538</sparkle:version>
+      <sparkle:shortVersionString>0.4.11</sparkle:shortVersionString>
+      <sparkle:minimumSystemVersion>13.0</sparkle:minimumSystemVersion>
+      <description>&lt;h3&gt;Jean 0.4.11&lt;/h3&gt;
+&lt;p&gt;Slack that's easier to follow: one pinned list of what's waiting on you, one thread per topic with a clear title, the latest version of every deliverable one tap away, and fewer things that slowed the team down.&lt;/p&gt;
+&lt;h3&gt;Before you start: one change in your Slack app&lt;/h3&gt;
+&lt;p&gt;Jean now pins its "Waiting on you" message, which needs one more permission:&lt;/p&gt;
+&lt;p&gt;1. Open api.slack.com/apps › Jean. 2. **OAuth &amp;amp; Permissions › Bot Token Scopes:** add `pins:write`. 3. Press **Reinstall to Workspace** and allow.&lt;/p&gt;
+&lt;p&gt;Without it, the message is still posted and kept up to date, just not pinned.&lt;/p&gt;
+&lt;p&gt;After installing, restart the Slack bridge once: `launchctl kickstart -k gui/$(id -u)/com.jean.bridge`.&lt;/p&gt;
+&lt;h3&gt;Slack: what's waiting on you&lt;/h3&gt;
+&lt;p&gt;- One **Waiting on you** message in the main channel, pinned and edited in place (never reposted). One line each, with a link: approvals waiting for your ✅, PRs that still need your **Approve** or **Merge** on GitHub, and board cards waiting on you. - Merge asks now start with **Approve on GitHub**, because a merge needs both your ✅ in Slack and GitHub's Approve. The PR stays on the list until it's merged. - The hub has a **Today** page with the same list.&lt;/p&gt;
+&lt;h3&gt;Slack: one thread per topic&lt;/h3&gt;
+&lt;p&gt;- The separate "X is on it" message is gone. The task card shows which specialist has it, with a link to their work thread. One task, one card, one answer. - When a thread already holds 5 tasks, Jean moves the next new request to its own thread. A new topic in a thread gets moved too. - Tasks are tagged with a project, and thread titles read like "[Jeorgia pitch] reviewer fixes". `jean projects` lists the projects. - The routing message no longer shows a raw link like `&amp;lt;https://…|in #jean-growth&amp;gt;`. (#110)&lt;/p&gt;
+&lt;h3&gt;Finding the latest file&lt;/h3&gt;
+&lt;p&gt;- Each project's deliverable has one Library entry marked **Latest**, with older versions folded underneath it. One link always opens the newest version, and final answers link to it instead of attaching a new file every round. - A new **Projects** page on the hub shows, for each project, its status, its latest files, and what's waiting on whom.&lt;/p&gt;
+&lt;h3&gt;Files&lt;/h3&gt;
+&lt;p&gt;- Files you attach to a request are copied into the specialist's own folder when the task goes to them, so nobody has to copy them by hand. - Specialists can attach text files (emails, changelogs, logs: .md, .txt, .eml and more) instead of squeezing long text into a reply. Text files you attach in Slack come through too. - `jean slack post` gives back where the message went, so replies and files can go under it. `jean slack new-thread "&amp;lt;title&amp;gt;"` starts a titled thread.&lt;/p&gt;
+&lt;h3&gt;Reliability&lt;/h3&gt;
+&lt;p&gt;- A message for a specialist who is restarting waits and is passed on once they're back, in order, instead of "send this again". Messages they were sent just before a restart are sent again to the new session. - Specialists message each other with `jean tell &amp;lt;specialist&amp;gt; "&amp;lt;message&amp;gt;"`, which waits the same way, instead of a direct message that a restart could lose. Specialists are addressed by their own name, never by an old session label like "Build [f168eb]". - Specialists work in their own folder again. Claude Code had started moving each one into a separate worktree copy before its first edit, and from there it couldn't commit in its own checkout (Build and #231). Jean now turns that off for its specialists (`claude.bgIsolation` in Jean's settings file changes it); helpers and workers still get their own worktrees from Jean. - Board card ids carry the specialist's name, so one specialist can't overwrite another's card by reusing an id.&lt;/p&gt;
+&lt;h3&gt;Team&lt;/h3&gt;
+&lt;p&gt;- An owner can let named team members ask Jean directly, without a ✅ for each request: `claude.directMembers` in Jean's settings file. They still can't approve anything. Off by default. On a personal Claude plan (Free, Pro, Max) this is the owner's own choice and account: Anthropic's terms keep those plans to one person.&lt;/p&gt;
+&lt;h3&gt;Security and fewer false stops (the guard)&lt;/h3&gt;
+&lt;p&gt;- Jean can start a helper for a busy specialist (`jean overflow ask`), as the manual says. Before, the guard stopped it, and work sat waiting. - A script that only reads files in a `.claude` folder (another specialist's worktree, say) is no longer stopped as "starting a Claude session". Starting Claude from a script still asks. - Adding a project is Jean's job; every specialist can read the list. - `jean tell --file` never reads a secret, and code can't use Jean's message queue to pass a note off as one from Slack.&lt;/p&gt;</description>
+      <enclosure url="https://github.com/msiegerJBI/jean-updates/releases/download/v0.4.11/Jean.dmg" length="141561766" type="application/octet-stream" sparkle:edSignature="a588SHds9vfaz+HQLcEVpsjhFQklHsQeKysFTjOczf4HBi8S8oR2KZO6jgmmKr4576ETTEgYE/lIgPVKjYwgDg==" />
+    </item>
+    <item>
       <title>Jean 0.4.10</title>
       <pubDate>Mon, 02 Nov 2026 01:45:48 GMT</pubDate>
       <sparkle:version>510</sparkle:version>
