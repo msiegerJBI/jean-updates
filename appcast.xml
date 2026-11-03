@@ -5,6 +5,17 @@
     <description>Jean updates</description>
     <language>en</language>
     <item>
+      <title>Jean 0.4.13</title>
+      <pubDate>Tue, 03 Nov 2026 07:52:35 GMT</pubDate>
+      <sparkle:version>545</sparkle:version>
+      <sparkle:shortVersionString>0.4.13</sparkle:shortVersionString>
+      <sparkle:minimumSystemVersion>13.0</sparkle:minimumSystemVersion>
+      <description>&lt;h3&gt;Jean 0.4.13&lt;/h3&gt;
+&lt;p&gt;Fewer, clearer approvals, and a task thread that's easier to follow.&lt;/p&gt;
+&lt;ul&gt;&lt;li&gt;**One approval for a job of several steps.** A job that needs the same kind of action a few times (a carousel import's start, upload and finish, say) now asks you once. The post says "covers 3 steps", and your one ✅ lets the specialist do those steps within the usual two hours. Up to 10 steps; anything else still asks for each action.&lt;/li&gt;&lt;li&gt;**Asks can be withdrawn.** When you change the plan (another artist, a dropped job), the team takes back the asks that no longer apply. The post then reads "Withdrawn: …" with no buttons, it leaves Waiting on you, and pressing Approve on it does nothing. Before, stale asks just sat there with live buttons until they ran out.&lt;/li&gt;&lt;li&gt;**Jean checks what's already made.** Before starting something new, Jean looks in the Library for a match and says what's already there, with a link. No more "waiting on Growth" for a set that already exists.&lt;/li&gt;&lt;li&gt;**The task card follows the conversation.** When you reply in a task's thread, its card moves down to just below your message, so you see the progress where you're reading. There's still only one card, and its Approve button still works after it moves.&lt;/li&gt;&lt;li&gt;**One ask per job, with the right kind.** When the guard stops an action, it now names the exact kind of approval it needs and suggests one ask for the whole job. A second ask for the same task within a few minutes is marked "(2nd ask for this task)", and Jean is told so it can combine or withdraw them.&lt;/li&gt;&lt;li&gt;**No more waiting for ever on a tap Jean can't see.** If a task has waited on you for 15 minutes, Jean checks whether you already did it some other way (in a product's own console, or on GitHub) and finishes the task if you did. Owners can change the 15 minutes with `slack.waitRecheckMinutes` (0 turns it off).&lt;/li&gt;&lt;/ul&gt;</description>
+      <enclosure url="https://github.com/msiegerJBI/jean-updates/releases/download/v0.4.13/Jean.dmg" length="141603914" type="application/octet-stream" sparkle:edSignature="jKGiSrZhZ8m+6TFnYcZ04ot/NfdwQXv72tKYIIrNQ3ZDDoPTmtbynRTJ/6k/4/Z9w/yCEC9p/ze2jItPcgrBAg==" />
+    </item>
+    <item>
       <title>Jean 0.4.12</title>
       <pubDate>Tue, 03 Nov 2026 07:32:40 GMT</pubDate>
       <sparkle:version>543</sparkle:version>
