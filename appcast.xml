@@ -5,6 +5,30 @@
     <description>Jean updates</description>
     <language>en</language>
     <item>
+      <title>Jean 0.4.14</title>
+      <pubDate>Wed, 04 Nov 2026 04:32:54 GMT</pubDate>
+      <sparkle:version>557</sparkle:version>
+      <sparkle:shortVersionString>0.4.14</sparkle:shortVersionString>
+      <sparkle:minimumSystemVersion>13.0</sparkle:minimumSystemVersion>
+      <description>&lt;h3&gt;Jean 0.4.14&lt;/h3&gt;
+&lt;p&gt;Two fixes from the evening of 3 November.&lt;/p&gt;
+&lt;h3&gt;"Waiting on you" updates again&lt;/h3&gt;
+&lt;p&gt;- The pinned list stopped updating once it got long (Slack said the message was too long, though Jean had kept it under Slack's limit). Slack counts each emoji by its name (✅ is `:white_check_mark:`) and some characters twice; Jean now counts the same way. If Slack still refuses an edit, Jean sends a list half as long instead of none, with "…and N more" pointing to Today on the hub.&lt;/p&gt;
+&lt;h3&gt;Jean always runs from Applications&lt;/h3&gt;
+&lt;p&gt;- After a release, opening "Jean" could start the freshly built copy in the build folder instead of the one in Applications, and that copy took over Jean's background services (Slack bridge, hub, nightly jobs). The next build would have replaced it under them. Now: - The app only takes over the background services from Applications. A copy anywhere else shows a note and leaves the team as it is. - `jean install` refuses to run from a build folder (`JEAN_INSTALL_ANYWHERE=1` overrides). - Releasing leaves the built app zipped, so macOS can't open it by name. - `jean install` repoints the Slack bridge's Python when the app has moved, so the bridge doesn't stop at its next restart.&lt;/p&gt;
+&lt;h3&gt;Helpers start (and stop) again&lt;/h3&gt;
+&lt;p&gt;- Claude Code 2.1 reports a new background session with a short id only. Jean read that as "failed to start", so helpers for a busy specialist ran and finished but were never tracked or stopped. Jean now takes the full id from Claude's own record of that session, only when its name and folder match the helper.&lt;/p&gt;
+&lt;h3&gt;Fewer asks, fewer posts&lt;/h3&gt;
+&lt;p&gt;- **Merge on your ✅ alone (opt-in).** With `github.adminMergeAfterSlack` turned on, a ✅'d merge ask lets the lane merge that pull request itself with GitHub's admin bypass, once, within the ask's two hours; merge asks stop saying "Approve on GitHub" and Waiting on you stops listing "no GitHub Approve yet". Off by default. - **One ask for a plan across lanes.** A job several specialists do in turn (put the content worker live, import and post, put it back) is one ask: the owner sees the steps as a numbered list, and one ✅ lets each specialist do its own steps. - **Approvals no longer post "Approved by …".** The ask itself now shows who approved it, what it allows and until when. - **Jean checks before asking you to tick.** `jean ask --list --task &amp;lt;id&amp;gt;` shows a task's asks and their state; the manual tells Jean to check it first, and to check a content tool's test mode before asking to publish.&lt;/p&gt;
+&lt;h3&gt;Quieter Slack, conversations that stay together&lt;/h3&gt;
+&lt;p&gt;- Your messages go straight to Jean, ahead of the specialists' own messages to each other. "X is restarting" now appears only when a delivery really failed for 45 seconds, once per thread, and changes to "Passed on to X." when it's delivered. - Every file Jean posts carries a line saying what it is: no more empty file messages. Several files can go in one post. - One "Files from the request, copied to…" line per task, naming every specialist that got them. - No extra "Waiting on the person" pointer when the specialist already said it waits on you. - A follow-up in an active conversation is never moved to a new thread. Only a new request after a quiet spell, in a thread holding 8 tasks or more, gets its own thread. - Team members allowed to ask directly (`claude.directMembers`) are named in the manual, so Jean takes their requests instead of answering "owners only".&lt;/p&gt;
+&lt;h3&gt;Keys and the Mac, from your phone&lt;/h3&gt;
+&lt;p&gt;- **Team keys:** Settings › Keys › Add key stores a named key (say STRIPE_TEST_SECRET_KEY). A specialist asks for one with `jean keys request`, which posts where to add it, once. A specialist uses it with `jean keys run &amp;lt;NAME&amp;gt; -- &amp;lt;command&amp;gt;`, after your ✅ on that exact command: the key is never shown to it, and printed output is masked. - `jean disk` shows free space and what takes it, without sudo; folders it can't read are named instead. - Specialists never ask you to type in Terminal or use sudo.&lt;/p&gt;
+&lt;h3&gt;The nightly review&lt;/h3&gt;
+&lt;p&gt;- Every night after the 04:00 restart, `jean review` counts the day from 7 AM: your messages and Jean's, chases, corrections, asks, noise, thread moves, outages. It compares with the week before and saves a report in the Library (project "Jean ops"). Ops then posts the trends and up to three suggested changes in #jean-ops. Nothing changes without your ✅. `jean review --dry` shows it any time. - Settings: `review.enabled`, `review.lane` (ops), `review.dayStart` ("07:00").&lt;/p&gt;</description>
+      <enclosure url="https://github.com/msiegerJBI/jean-updates/releases/download/v0.4.14/Jean.dmg" length="141584058" type="application/octet-stream" sparkle:edSignature="H1hCpFwHaIW52rzF6Wx6xgHC7Qu816m0ylMCl7EvCz1nazeFAKtDNwl+1Gy5LVAOclLP0zQYfh6elFHYwJxXCQ==" />
+    </item>
+    <item>
       <title>Jean 0.4.13</title>
       <pubDate>Tue, 03 Nov 2026 07:52:35 GMT</pubDate>
       <sparkle:version>545</sparkle:version>
